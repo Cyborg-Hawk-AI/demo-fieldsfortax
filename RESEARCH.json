@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "name": "FieldsForTax",
+    "fingerprint": "tax-practice-custom-field-crm-addon",
+    "pitch": "Custom-field client data layer that plugs into TaxDome or any tax CRM via CSV sync.",
+    "cluster": "Custom Client Data Tracking in Tax Workflows",
+    "target_customer": "Tax preparers already using TaxDome, Canopy, or similar tools who supplement with spreadsheets to track custom client data",
+    "core_features": [
+      "Unlimited custom fields per client (dropdowns, checkboxes, numeric, date, text)",
+      "Pre-built tax-specific field templates (dependents, carryover losses, entity type, filing status, prior-year AGI)",
+      "Two-way CSV import/export compatible with TaxDome and Canopy client lists",
+      "Per-client data change history/audit log",
+      "Bulk field update via spreadsheet paste"
+    ],
+    "pricing_model": "Flat monthly SaaS, per-firm pricing",
+    "price_point": "$29/month flat per firm (unlimited clients, unlimited fields); annual plan at $290",
+    "gtm_channel": "r/Accounting and r/taxpros posts demonstrating the spreadsheet-replacement use case; TaxDome Facebook community; direct outreach to users who post about custom spreadsheets",
+    "competitive_landscape": "No dedicated custom-field add-on for tax CRMs exists. TaxDome has limited built-in fields. Airtable/Notion are generic and require setup. This is a narrow, unserved niche.",
+    "unfair_advantage": "Hyper-specific to tax data vocabulary \u2014 ships with pre-built field templates that a generic tool like Airtable never will, reducing setup friction to near zero",
+    "mvp_estimate": "Next.js + Supabase (JSONB custom fields per client row) + Papaparse for CSV; 2 weeks to MVP",
+    "agentic_automation": "All data storage and retrieval is database-driven with no manual processing. CSV exports are generated on-demand by the app. Billing is Stripe-automated. No content to update. Support volume for a simple CRUD tool is minimal and handled by an AI chat widget. Owner time after launch is essentially zero except for occasional feature requests reviewed weekly.",
+    "origin_story": "A tax practice owner on r/Accounting described feeling like their practice management tool was 'restrictive' and didn't let them track the detailed client data points they needed for tax preparation \u2014 things like carryover losses, dependent details, and entity-specific flags. Their workaround was TaxDome plus a separate spreadsheet, and they had already started building a custom internal solution because nothing on the market solved it. This is a classic 'power user trapped in a generic tool' problem: TaxDome is built for workflow management, not flexible data modeling, and tax prep requires tracking dozens of client-specific variables that change year to year.",
+    "automation_playbook": "The product is a pure CRUD SaaS \u2014 users enter data, the database stores it, exports are generated on demand. There is no recurring data processing, no content pipeline, and no integrations requiring maintenance. Stripe handles billing and sends dunning emails automatically. A Crisp or Intercom AI widget handles support questions. The owner reviews a weekly Stripe revenue digest (automated email) and a support ticket summary. Estimated owner time: under 1 hour/week.",
+    "maintenance_hours_per_week": 1,
+    "keywords": [
+      "tax client data tracking",
+      "TaxDome custom fields",
+      "tax CRM spreadsheet replacement"
+    ],
+    "supporting_urls": [
+      "https://www.reddit.com/r/Accounting/comments/1udzgd3/anyone_else_feel_like_their_practice_management/"
+    ],
+    "weighted_total": 100,
+    "checklist": {
+      "ten_plus_posts_same_pain": true,
+      "paying_for_inferior_solution": true,
+      "reachable_channel": true,
+      "mvp_under_4_weeks": true,
+      "price_point_high_enough": true,
+      "hair_on_fire": true,
+      "can_presell": true,
+      "fewer_than_3_competitors": true,
+      "low_maintenance_ops": true
+    },
+    "checklist_passed": 9,
+    "momentum": "unknown",
+    "rising_queries": [],
+    "gate_result": "passed"
+  },
+  "pain_points": [
+    {
+      "problem": "Existing accounting software doesn't meet expectations, is being discontinued, or is overly complicated and expensive for the features offered.",
+      "persona": "Tax and bookkeeping business owner",
+      "current_workaround": "Using multiple tools: QuickBooks Online for bookkeeping, DocuSign for e-signatures, Goldmine for scheduling and client paperwork tracking",
+      "frequency": "daily",
+      "wtp_signal": "Currently paying for QuickBooks Online, DocuSign, and Goldmine subscriptions",
+      "url": "https://www.reddit.com/r/Accounting/comments/1u8u89k/looking_for_accounting_program_recommendations/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Practice management tools are restrictive and don't accommodate tracking of detailed client data points needed for tax preparation.",
+      "persona": "Tax accounting practice owner",
+      "current_workaround": "Using TaxDome plus spreadsheets to manually compile data; building custom solution internally",
+      "frequency": "daily",
+      "wtp_signal": "Spending ~$500 annually on software; investing time to build custom solution",
+      "url": "https://www.reddit.com/r/Accounting/comments/1udzgd3/anyone_else_feel_like_their_practice_management/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "E-signature solution (DocuSign) has reliability issues with clients being unable to complete signatures.",
+      "persona": "Tax and bookkeeping business owner",
+      "current_workaround": "Currently using DocuSign despite frequent client sign-up failures",
+      "frequency": "weekly",
+      "wtp_signal": "Paying for DocuSign subscription",
+      "url": "https://www.reddit.com/r/Accounting/comments/1u8u89k/looking_for_accounting_program_recommendations/",
+      "engagement": 0,
+      "source": "reddit"
+    },
+    {
+      "problem": "Meeting scheduling and client paperwork tracking system is frustrating and unreliable.",
+      "persona": "Tax and bookkeeping business owner",
+      "current_workaround": "Using Goldmine for both scheduling and client document submission tracking",
+      "frequency": "daily",
+      "wtp_signal": "Paying for Goldmine subscription",
+      "url": "https://www.reddit.com/r/Accounting/comments/1u8u89k/looking_for_accounting_program_recommendations/",
+      "engagement": 0,
+      "source": "reddit"
+    }
+  ]
+}
